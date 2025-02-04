@@ -1,0 +1,272 @@
+.tracking-in-expand-fwd{-webkit-animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) both}
+@-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+.bg-pan-right{-webkit-animation:bg-pan-right 8s both;animation:bg-pan-right 8s both}
+@-webkit-keyframes bg-pan-right{0%{background-position:20% 50%}100%{background-position:100% 50%}}@keyframes bg-pan-right{0%{background-position:0 50%}100%{background-position:75% 50%}}
+.tracking-in-contract{-webkit-animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both}
+@-webkit-keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}@keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+.containers {
+  background-image: url('../imgs/hero-bg.webp');
+  background-size: cover;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  background-color: #464646;
+  color: white;
+  padding: 15px;
+}
+
+.logo {
+  max-height: 4vh;
+  margin-right: 20px;
+}
+ul{
+  list-style: none;
+  
+}
+.container {
+  flex: 1;
+}
+h1 { 
+  font-size: clamp(24px, 4vw, 36px); 
+  color: #464646;
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  padding: 10px;
+  background-color: transparent;
+}
+
+footer {
+  background-color: #464646;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.izq {
+  margin: auto 30px;
+}
+
+.footer-logo {
+  max-height: 30px;
+  margin-right: 10%;
+}
+.btn-registro:hover span{
+  color:#464646;
+  font-weight: bold;
+  font-size: 30px;
+}
+#cambioIdioma{
+  margin-left: 60%;
+  color:#ccc;
+}
+
+@media (max-width: 810px) {
+  .containers {
+      background-position: 75% 0%;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .izq {
+      background-color: rgba(211, 211, 211, 0.6);
+      min-width: 100%;
+      height: 100vh;
+      margin-left: 0;
+      padding-top: 20%;
+      padding-left: 30px;
+  }
+  .input-group-text,
+    .label-registro {
+        display: none;
+    }
+  .formulario-registro {
+        width: 100%;
+        margin: 20px auto;
+        /* Centrando horizontalmente */
+    }
+    .fixed-bottom .container > * { /* El > selecciona solo los hijos directos de .container */
+      display: block;
+      width: 100%; /* O el ancho que desees */
+    }
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?h3ms4w');
+  src:  url('fonts/icomoon.eot?h3ms4w#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?h3ms4w') format('truetype'),
+    url('fonts/icomoon.woff?h3ms4w') format('woff'),
+    url('fonts/icomoon.svg?h3ms4w#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'BTechovier';
+  src: url(fonts/Techovier\ Bold.ttf);
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url(fonts/GeneralSans-Regular.otf);
+}
+.Techovier{
+  font-family: 'BTechovier';
+  
+}
+.GeneralSans{
+  font-family: 'GeneralSans';
+  padding-right: 15%;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-face:before {
+  content: "\e907";
+  color: #4e525b;
+}
+.icon-insta:before {
+  content: "\e908";
+  color: #4e525b;
+}
+.icon-twitter:before {
+  content: "\e909";
+  color: #4e525b;
+}
+.icon-whats:before {
+  content: "\e90a";
+  color: #4e525b;
+}
+.icon-areas-verdes:before {
+  content: "\e901";
+}
+.icon-canchas-Padel:before {
+  content: "\e903";
+}
+.icon-fogatas:before {
+  content: "\e904";
+}
+.icon-pet-area:before {
+  content: "\e905";
+}
+.icon-seguridad:before {
+  content: "\e906";
+}
+.icon-alberca:before {
+  content: "\e900";
+}
+.icon-andadores:before {
+  content: "\e902";
+}
+.icon-voleibol:before {
+  content: "\e90e";
+}
+.icon-telefono:before {
+  content: "\e945";
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+a{
+  text-decoration: none;
+}
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    height: 20%;
+    width: 100%;
+    display: inline-flex;
+    position: relative;
+}
+
+.formulario-registro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    background-color: #EA8806;
+    margin-top: 20px;
+    border: none;
+}
+ul{
+  list-style: none;
+}
+.form-control,
+.btn-registro,
+.input-group-text {
+    border-radius: 0;
+    /* Elimina las esquinas redondeadas */
+}
+
+.wrap-input100 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input100 {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: transparent;
+    /* Elimina el color de fondo */
+}
+
+.btn-registro {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+}
+
+.label-registro {
+    font-size: 1rem;
+    color: #fff;
+    margin-right: 10px;
+}
+.banner {   
+  display: flex; /* Para que los logos se distribuyan horizontalmente */
+  justify-content: center; /* Centra los logos horizontalmente */
+  align-items: center; 
+}
+
+.banner img {
+  filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.65)); /* Corrección: 10px */
+}
