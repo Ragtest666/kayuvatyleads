@@ -136,7 +136,8 @@ if (isset($_POST['registrar'])) {
             </div>
             <div class="row">
                 <div class="col-12 col-md text-center">
-                    <p class="GeneralSans">&copy; 2025 KAYUVATY. Todos los derechos reservados.</p>
+                    <p class="GeneralSans cambio_idioma_ES">&copy; 2025 KAYUVATY. Todos los derechos reservados.</p>
+                    <p class="GeneralSans cambio_idioma_EN" style="display: none !important;">&copy; 2025 KAYUVATY. All rights reserved.</p>
                 </div>
             </div>
         </div>
