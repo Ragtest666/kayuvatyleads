@@ -54,6 +54,10 @@ footer {
   align-items: center;
   justify-content: flex-start;
 }
+footer div{
+  flex: 1;
+  padding: 10px;
+}
 
 .izq {
   margin: auto 30px;
@@ -99,6 +103,9 @@ footer {
     .fixed-bottom .container > * { /* El > selecciona solo los hijos directos de .container */
       display: block;
       width: 100%; /* O el ancho que desees */
+    }
+    footer{
+      flex-direction: column;
     }
 }
 @font-face {
