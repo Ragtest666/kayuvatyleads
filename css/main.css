@@ -181,7 +181,7 @@ input[type="email"] {
 .text-container{
   justify-content: end;
 }
-@media (max-width: 810px) {
+@media (max-width: 756px) {
   .logos {
     margin-left: 15%;
     justify-content: center;
