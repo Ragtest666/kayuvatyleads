@@ -1,31 +1,30 @@
-<!-- <?php
+<?php
 if (isset($_POST['registrar'])) {
-    if (!isset($_POST['email'])) {
-        echo '<div class="alert alert-danger alert-dismissible fade show position-fixed top-0 start-0 w-100 z-3" role="alert">
-                  No se pudo enviar el correo.
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>';
+    if (!isset($_POST['email']) || empty($_POST['email'])) {
+        echo '<div class="alert alert-danger">No se pudo enviar el correo. Campo vacío.</div>';
     } else {
-        $to = 'info@kayuvaty.mx';
-        $subject = 'Lead de Pagina web';
-        $message = 'Correo electronico: ' . $_POST['email'] . "\r\n"; // Asegúrate de inicializar la variable $message
-        $headers = 'From: ' . $_POST['email'] . "\r\n" .
-            'Reply-To: ' . $_POST['email'] . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
-        if (mail($to, $subject, $message, $headers)) {
-            echo '<div class="alert alert-success alert-dismissible fade show position-fixed top-0 start-0 w-100 z-3" role="alert">
-                  <strong>Exito!</strong> correo enviado correctamente.
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>';
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo '<div class="alert alert-danger">Correo electrónico inválido.</div>';
         } else {
-            echo '<div class="alert alert-danger alert-dismissible fade show position-fixed top-0 start-0 w-100 z-3" role="alert">
-                  No se pudo enviar el correo.
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>';
+            $to = 'info@kayuvaty.mx';
+            $subject = 'Lead de Pagina Web';
+            $message = "Correo electrónico: $email \r\n";
+            $headers = "From: no-reply@tudominio.com\r\n";
+            $headers .= "Reply-To: $email\r\n";
+            $headers .= "X-Mailer: PHP/" . phpversion();
+
+            if (mail($to, $subject, $message, $headers)) {
+                echo '<div class="alert alert-success">¡Éxito! Correo enviado correctamente.</div>';
+            } else {
+                echo '<div class="alert alert-danger">No se pudo enviar el correo.</div>';
+            }
         }
     }
+}
+?>
 
-?>-->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -107,19 +106,21 @@ if (isset($_POST['registrar'])) {
             <br>
             <p class="cambio_idioma_ES GeneralSans text-uppercase md-5 tracking-in-expand-fwd"><strong>Regístrate para ser el primero en conocer este magnífico desarrollo</strong></p>
             <p class="cambio_idioma_EN GeneralSans text-uppercase md-5 tracking-in-expand-fwd" style="display:none !important;"><strong>Sign up to be the first to know about this magnificent development.</strong></p>
-            <form action="" method="POST" onsubmit="return validarCorreo(event)">
+            <form action="#" method="POST" onsubmit="return validarCorreo(event)">
                 <div class="formulario-registro">
                     <div class="wrap-input100">
-                        <input type="email" class="input100 cambio_idioma_ES" id="email" name="email" placeholder="Introduce tu correo" required="">
-                        <input type="email" class="input100 cambio_idioma_EN" style="display:none !important;" id="email" name="email" placeholder="Enter your email address" required="">
+                        <!-- Input en español -->
+                        <input type="email" class="input100 cambio_idioma_ES" id="email_es" name="" placeholder="Introduce tu correo" required style="display: none;">
+                        <!-- Input en inglés -->
+                        <input type="email" class="input100 cambio_idioma_EN" id="email_en" name="" placeholder="Enter your email address" required>
                         <button class="btn-registro" type="submit" name="registrar">
-                            <span class="material-symbols-outlined">
-                                arrow_forward_ios
-                            </span>
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
                         </button>
                     </div>
+                    <p id="error-mensaje" style="color: red; display: none;"></p>
                 </div>
             </form>
+
 
         </div>
 
@@ -140,7 +141,14 @@ if (isset($_POST['registrar'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    
+    <script>
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function() {
+                $(this).remove();
+            });
+        }, 1000);
+    </script>
+
 </body>
 
 </html>

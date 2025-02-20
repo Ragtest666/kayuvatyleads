@@ -231,19 +231,6 @@ input[type="email"] {
   }
 
 }
-
-@font-face {
-  font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?h3ms4w');
-  src: url('fonts/icomoon.eot?h3ms4w#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h3ms4w') format('truetype'),
-    url('fonts/icomoon.woff?h3ms4w') format('woff'),
-    url('fonts/icomoon.svg?h3ms4w#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
 @font-face {
   font-family: 'BTechovier';
   src: url(fonts/Techovier\ Bold.ttf);
@@ -264,8 +251,19 @@ input[type="email"] {
   padding-right: 15%;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?5rvpsq');
+  src:  url('fonts/icomoon.eot?5rvpsq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5rvpsq') format('truetype'),
+    url('fonts/icomoon.woff?5rvpsq') format('woff'),
+    url('fonts/icomoon.svg?5rvpsq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -284,58 +282,55 @@ input[type="email"] {
   content: "\e907";
   color: #4e525b;
 }
-
 .icon-insta:before {
   content: "\e908";
   color: #4e525b;
 }
-
-.icon-twitter:before {
-  content: "\e909";
-  color: #4e525b;
-}
-
-.icon-whats:before {
-  content: "\e90a";
-  color: #4e525b;
-}
-
-.icon-areas-verdes:before {
-  content: "\e901";
-}
-
-.icon-canchas-Padel:before {
-  content: "\e903";
-}
-
-.icon-fogatas:before {
-  content: "\e904";
-}
-
-.icon-pet-area:before {
-  content: "\e905";
-}
-
-.icon-seguridad:before {
-  content: "\e906";
-}
-
-.icon-alberca:before {
+.icon-Area-Comercial:before {
   content: "\e900";
 }
-
-.icon-andadores:before {
+.icon-Fire-Pits:before {
+  content: "\e901";
+}
+.icon-Gym:before {
   content: "\e902";
 }
-
-.icon-voleibol:before {
+.icon-Padel-Court:before {
+  content: "\e903";
+}
+.icon-Park:before {
+  content: "\e904";
+}
+.icon-Pet-Park:before {
+  content: "\e905";
+}
+.icon-Pool-Areas:before {
+  content: "\e906";
+}
+.icon-Roof-Top-Bar:before {
+  content: "\e90b";
+}
+.icon-Roof-Top-Pool:before {
+  content: "\e90c";
+}
+.icon-Security:before {
+  content: "\e90d";
+}
+.icon-SPA:before {
   content: "\e90e";
 }
-
-.icon-telefono:before {
+.icon-Terrace:before {
+  content: "\e90f";
+}
+.icon-Walking-Area:before {
+  content: "\e910";
+}
+.icon-Yoga:before {
+  content: "\e911";
+}
+.icon-tel:before {
   content: "\e945";
 }
-
 html,
 body {
   height: 100%;
